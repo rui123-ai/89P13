@@ -359,4 +359,207 @@ body {
     .planet-text {
         padding: 0 20px;
     }
+}
+
+/* Profile Section */
+.profile {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--deep-blue), var(--gray-purple));
+}
+
+.profile h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgba(225, 190, 231, 0.7);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.profile-card {
+    background-color: rgba(26, 16, 102, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--vibrant-purple);
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(123, 31, 162, 0.5);
+}
+
+.profile-card h3 {
+    color: var(--soft-lilac);
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.profile-card ul {
+    list-style: none;
+}
+
+.profile-card li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.profile-card li::before {
+    content: '•';
+    color: var(--vibrant-purple);
+    position: absolute;
+    left: 0;
+}
+
+/* Relationships Section */
+.relationships {
+    padding: 80px 0;
+    background-color: var(--soft-lilac);
+    color: var(--deep-blue);
+}
+
+.relationships h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.timeline-relations {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.relation-period {
+    margin-bottom: 40px;
+}
+
+.relation-period h3 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 20px;
+    color: var(--vibrant-purple);
+}
+
+.relation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.relation-card {
+    background-color: var(--deep-blue);
+    color: var(--text-light);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--vibrant-purple);
+    transition: all 0.3s ease;
+}
+
+.relation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(123, 31, 162, 0.5);
+}
+
+.relation-card h4 {
+    color: var(--soft-lilac);
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Origin Section */
+.origin {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--gray-purple), var(--deep-blue));
+}
+
+.origin h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgba(225, 190, 231, 0.7);
+}
+
+.origin-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.origin-text {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.origin-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Abilities Section */
+.abilities {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--deep-blue), var(--gray-purple));
+}
+
+.abilities h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgba(225, 190, 231, 0.7);
+}
+
+.ability-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.ability-card {
+    background-color: rgba(26, 16, 102, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid var(--vibrant-purple);
+    transition: all 0.3s ease;
+}
+
+.ability-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(123, 31, 162, 0.5);
+}
+
+.ability-card i {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--soft-lilac);
+}
+
+.ability-card h3 {
+    color: var(--soft-lilac);
+    margin-bottom: 15px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-grid,
+    .relation-cards,
+    .origin-features,
+    .ability-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-card,
+    .relation-card,
+    .ability-card {
+        margin: 0 20px;
+    }
 } 
