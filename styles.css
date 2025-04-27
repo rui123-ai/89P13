@@ -947,4 +947,49 @@ body::before {
         height: 35px;
         font-size: 1rem;
     }
+}
+
+/* Khan'dar Comparison Section */
+.khandar-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.comparison-item {
+    text-align: center;
+    background: rgba(26, 16, 102, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--vibrant-purple);
+    box-shadow: 0 0 20px rgba(123, 31, 162, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.comparison-item:hover {
+    transform: translateY(-10px);
+}
+
+.comparison-item h3 {
+    color: var(--soft-lilac);
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(123, 31, 162, 0.5);
+}
+
+.comparison-gif {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid var(--vibrant-purple);
+    box-shadow: 0 0 15px rgba(123, 31, 162, 0.3);
+}
+
+@media (max-width: 768px) {
+    .khandar-comparison {
+        grid-template-columns: 1fr;
+    }
 } 
