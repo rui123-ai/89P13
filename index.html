@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ra'ven Andor - A Origem do Lendário Hacker</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -675,9 +676,20 @@
         const playPauseBtn = document.getElementById('play-pause');
         const volumeSlider = document.getElementById('volume-slider');
         const playPauseIcon = playPauseBtn.querySelector('i');
+        let hasInteracted = false;
 
         // Set initial volume
         audio.volume = volumeSlider.value / 100;
+
+        // Function to start playing music
+        function playMusic() {
+            if (!hasInteracted) {
+                audio.play();
+                playPauseIcon.classList.remove('fa-play');
+                playPauseIcon.classList.add('fa-pause');
+                hasInteracted = true;
+            }
+        }
 
         // Play/Pause button functionality
         playPauseBtn.addEventListener('click', () => {
@@ -690,12 +702,20 @@
                 playPauseIcon.classList.remove('fa-pause');
                 playPauseIcon.classList.add('fa-play');
             }
+            hasInteracted = true;
         });
 
         // Volume control
         volumeSlider.addEventListener('input', () => {
             audio.volume = volumeSlider.value / 100;
+            hasInteracted = true;
         });
+
+        // Play music on any interaction with the site
+        document.addEventListener('click', playMusic);
+        document.addEventListener('keydown', playMusic);
+        document.addEventListener('scroll', playMusic);
+        document.addEventListener('touchstart', playMusic);
     </script>
 </body>
 </html> 
