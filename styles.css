@@ -283,4 +283,80 @@ body {
     .timeline-item:nth-child(odd) .timeline-content {
         margin-left: 0;
     }
+}
+
+/* Planet Section */
+.planet {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--gray-purple), var(--deep-blue));
+    color: var(--text-light);
+}
+
+.planet h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgba(225, 190, 231, 0.7);
+}
+
+.planet-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.planet-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.planet-text p {
+    margin-bottom: 20px;
+}
+
+.planet-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature {
+    background-color: rgba(26, 16, 102, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid var(--vibrant-purple);
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(123, 31, 162, 0.5);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--soft-lilac);
+}
+
+.feature h3 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 15px;
+    color: var(--soft-lilac);
+}
+
+/* Responsive adjustments for planet section */
+@media (max-width: 768px) {
+    .planet-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .planet-text {
+        padding: 0 20px;
+    }
 } 
