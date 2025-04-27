@@ -15,8 +15,26 @@
 body {
     font-family: 'Exo', sans-serif;
     background-color: var(--deep-blue);
+    background-image: url('raven2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: var(--text-light);
     line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Add a dark overlay to improve text readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 16, 102, 0.85); /* Dark blue overlay with 85% opacity */
+    z-index: -1;
 }
 
 .container {
@@ -74,7 +92,9 @@ body {
 /* Hero Section */
 .hero {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--deep-blue), var(--gray-purple));
+    background: rgba(26, 16, 102, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     text-align: center;
 }
 
@@ -364,7 +384,9 @@ body {
 /* Profile Section */
 .profile {
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--deep-blue), var(--gray-purple));
+    background: rgba(26, 16, 102, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .profile h2 {
@@ -382,7 +404,9 @@ body {
 }
 
 .profile-card {
-    background-color: rgba(26, 16, 102, 0.7);
+    background-color: rgba(26, 16, 102, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     padding: 30px;
     border-radius: 10px;
     border: 2px solid var(--vibrant-purple);
@@ -420,7 +444,7 @@ body {
 /* Relationships Section */
 .relationships {
     padding: 80px 0;
-    background-color: var(--soft-lilac);
+    background: rgba(225, 190, 231, 0.9);
     color: var(--deep-blue);
 }
 
@@ -452,7 +476,9 @@ body {
 }
 
 .relation-card {
-    background-color: var(--deep-blue);
+    background-color: rgba(26, 16, 102, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     color: var(--text-light);
     padding: 20px;
     border-radius: 10px;
@@ -581,7 +607,9 @@ body {
 }
 
 .ability-card {
-    background-color: rgba(26, 16, 102, 0.7);
+    background-color: rgba(26, 16, 102, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -732,7 +760,9 @@ body {
 }
 
 .info-box {
-    background-color: rgba(26, 16, 102, 0.5);
+    background-color: rgba(26, 16, 102, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
