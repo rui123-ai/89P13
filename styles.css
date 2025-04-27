@@ -827,4 +827,124 @@ body::before {
 
 .profile-image img:hover {
     transform: scale(1.1);
+}
+
+/* Audio Player Styles */
+.audio-player {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(26, 16, 102, 0.85);
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid var(--vibrant-purple);
+    box-shadow: 0 0 15px rgba(123, 31, 162, 0.5);
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.audio-btn {
+    background: none;
+    border: none;
+    color: var(--soft-lilac);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.audio-btn:hover {
+    background: rgba(225, 190, 231, 0.2);
+    transform: scale(1.1);
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--soft-lilac);
+}
+
+.volume-control i {
+    font-size: 1.2rem;
+}
+
+#volume-slider {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--gray-purple);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+#volume-slider:hover {
+    opacity: 1;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--vibrant-purple);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#volume-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(123, 31, 162, 0.7);
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--vibrant-purple);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+#volume-slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(123, 31, 162, 0.7);
+}
+
+/* Responsive design for audio player */
+@media (max-width: 768px) {
+    .audio-player {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        padding: 8px;
+    }
+
+    #volume-slider {
+        width: 60px;
+    }
+
+    .audio-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
 } 
