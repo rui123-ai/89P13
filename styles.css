@@ -535,6 +535,33 @@ body {
     text-shadow: 0 0 15px rgba(225, 190, 231, 0.7);
 }
 
+.season-section {
+    margin-bottom: 60px;
+}
+
+.season-section h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--soft-lilac);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px rgba(123, 31, 162, 0.5);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.season-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: var(--vibrant-purple);
+    box-shadow: 0 0 10px rgba(123, 31, 162, 0.5);
+}
+
 .ability-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
